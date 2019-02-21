@@ -13,7 +13,7 @@ class CreatePotosTable extends Migration
      */
     public function up()
     {
-        Schema::create('potos', function (Blueprint $table) {
+        Schema::create('photos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('album_id');
             $table->string('photo');
@@ -31,6 +31,6 @@ class CreatePotosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('potos');
+        Schema::dropIfExists('photos');
     }
 }

@@ -36,6 +36,10 @@ class AlbumsController extends Controller
         $album->description=$request->input('description');
         $album->cover_image=$filenameToStore;
         $album->save();
-        return Redirect::to('/albums')->with('success','Album Created');
+        return Redirect('/albums')->with('success','Album Created');
+    }
+    public function show($id){
+        $album= Album::with('Photos')->find($id);
+        return view('albums.show')->with('album',$album);
     }
 }

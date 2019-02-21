@@ -1,5 +1,6 @@
-@extends('layouts.app')
+@extends('layoutss.app')
 @section('content')
+<div class="container">
 <div style='width:50%'>
 <h3>create albums</h3>
 {!!Form::open(['action'=>'AlbumsController@store','method'=>'POST','enctype'=>'multipart/form-data'])!!}
@@ -9,5 +10,6 @@
 {{Form::submit('submit')}}
 {!!Form::close()!!}
 
+</div>
 </div>
 @endsection
